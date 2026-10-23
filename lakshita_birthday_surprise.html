@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Lakshita 💗 | Birthday Surprise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ffe2ee;--hot:#ff4f91;--deep:#9f2e61;--cream:#fff9fc}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;overflow-x:hidden;background:radial-gradient(circle at 12% 12%,#fff8fb 0,transparent 30%),radial-gradient(circle at 88% 82%,#ffc5df 0,transparent 35%),var(--pink);color:var(--deep);font-family:'DM Sans',sans-serif;display:grid;place-items:center;padding:20px}
+.hearts,.confetti{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.heart{position:absolute;bottom:-50px;color:rgba(255,79,145,.48);animation:floatUp linear infinite;user-select:none}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.card{z-index:1;position:relative;width:min(100%,620px);text-align:center;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);border-radius:30px;padding:clamp(24px,5vw,44px);box-shadow:0 22px 70px rgba(169,46,101,.15);backdrop-filter:blur(10px);margin:18px 0}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,8vw,3rem);line-height:1.12;margin:12px 0;color:#d9367b}
+.script{font-family:'Sacramento',cursive;font-size:clamp(2.2rem,9vw,3.5rem);color:#d9367b;line-height:1.1}
+p{font-size:1.02rem;line-height:1.8;color:#87405f}
+.question{font-size:clamp(1.2rem,4vw,1.55rem);font-weight:700;margin:22px 0;color:#8e2856}
+button{border:0;border-radius:999px;padding:13px 23px;font:700 .98rem 'DM Sans',sans-serif;cursor:pointer;transition:transform .18s,box-shadow .18s}
+button:hover{transform:translateY(-2px)}
+.yes,.primary{color:#fff;background:linear-gradient(135deg,#ff5b9b,#e63882);box-shadow:0 8px 18px #ff8db8aa}
+.no,.secondary{background:#fff;color:#c84b7f;border:1px solid #ffc2da}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;min-height:50px}
+.small{font-size:.86rem;opacity:.8;margin-top:18px}
+.hidden{display:none!important}
+.emoji{font-size:2.4rem;margin-bottom:6px}
+.envelope-wrap{margin:26px auto 14px;width:190px;height:132px;position:relative;cursor:pointer;perspective:600px}
+.envelope{position:absolute;inset:20px 0 0;background:#ff91b9;border-radius:8px;box-shadow:0 12px 25px #e65c9260}
+.envelope:before{content:"";position:absolute;inset:0;background:#ffb5d0;clip-path:polygon(0 0,50% 58%,100% 0);transform-origin:top;transition:transform .7s;z-index:3}
+.envelope:after{content:"";position:absolute;inset:0;background:#ff6fa5;clip-path:polygon(0 100%,0 0,50% 55%,100% 0,100% 100%);z-index:2;border-radius:0 0 8px 8px}
+.letter-peek{position:absolute;left:15px;right:15px;bottom:18px;height:100px;background:#fff9fc;border-radius:7px;display:grid;place-items:center;font-size:2rem;box-shadow:0 3px 8px #a92e6520;transition:transform .8s;z-index:1}
+.envelope-wrap.open .letter-peek{transform:translateY(-78px);z-index:4}
+.envelope-wrap.open .envelope:before{transform:rotateX(180deg);z-index:0}
+.tap-hint{font-size:.9rem;color:#b94b7a}
+.letter{background:#fffafc;border:1px solid #ffd3e4;border-radius:20px;padding:22px 20px;margin-top:18px;text-align:left;box-shadow:inset 0 0 0 5px #fff3f8}
+.letter p{margin:12px 0}
+.signature{text-align:right;font-family:'Sacramento',cursive;font-size:2rem;color:#d9367b;margin-top:14px}
+.music-row{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
+.music-note{font-size:1.1rem}
+.photo-frame{margin:20px auto 10px;width:min(100%,360px);aspect-ratio:4/3;border:2px dashed #f4a4c5;border-radius:22px;background:linear-gradient(135deg,#fff4f9,#ffe0ed);display:grid;place-items:center;overflow:hidden;color:#b94b7a;padding:14px}
+.photo-frame img{width:100%;height:100%;object-fit:cover;border-radius:15px}
+.memories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.memory{border-radius:16px;background:#fff4f9;border:1px solid #ffd2e3;padding:14px;font-size:.9rem;color:#a13a69}
+.memory b{display:block;font-size:1.3rem;margin-bottom:5px}
+.final-note{margin-top:22px;padding-top:18px;border-top:1px solid #ffd2e3}
+.confetti-piece{position:absolute;top:-20px;width:8px;height:13px;animation:fall 3.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.15}}
+@media(max-width:420px){.card{padding:24px 17px}.memories{grid-template-columns:1fr}.envelope-wrap{transform:scale(.92)}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+<main class="card">
+  <section id="screen1">
+    <div class="emoji">💗</div><div class="script">A little surprise...</div>
+    <p>Hey Lakshita! Before we open your tiny surprise, I have two very important questions. 🎀</p>
+    <div class="question">Is your birthday today? 🎂</div>
+    <div class="buttons"><button class="yes" onclick="showScreen(2)">Yes 💖</button><button class="no" id="no1">No 🙈</button></div>
+    <p class="small">Psst… choose wisely ✨</p>
+  </section>
+
+  <section id="screen2" class="hidden">
+    <div class="emoji">🥹💕</div><h1>Wait a second…</h1>
+    <p>I'm just making absolutely sure, because a sister as special as you deserves a proper surprise.</p>
+    <div class="question">Are you sure, Lakshita? 🎀</div>
+    <div class="buttons"><button class="yes" onclick="showScreen(3)">Yes, sure! 💗</button><button class="no" id="no2">No 😝</button></div>
+    <p class="small">There's a little magic waiting for you…</p>
+  </section>
+
+  <section id="screen3" class="hidden">
+    <div class="emoji">💌</div><h1>Something for you</h1>
+    <p>A little letter, from the heart. Tap the envelope to open it. 💗</p>
+    <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Open the letter" onclick="openLetter()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetter()}">
+      <div class="letter-peek">💌</div><div class="envelope"></div>
+    </div>
+    <div class="tap-hint" id="tapHint">Tap the envelope to open your letter ✨</div>
+    <div class="letter hidden" id="letter">
+      <div class="script">Happy Birthday, Lakshita! 💗</div>
+      <p>Happy Birthday, behen! 🥹💖</p>
+      <p>I just want you to know how genuinely grateful I am to have you in my life. Thank you for being the kind of person who can make an ordinary day feel better just by being there. Your presence, your support, your silly moments, and all the little things you do mean more to me than I probably say out loud.</p>
+      <p>I'm grateful for every laugh, every conversation, every memory, and even the random nonsense that somehow becomes the funniest part of the day. You make life a little brighter, and I'm really lucky to have a sister like you—not because we have to be perfect, but because we can simply be ourselves around each other.</p>
+      <p>I hope this new year of your life brings you peace, confidence, good health, exciting opportunities, and so many reasons to smile. May your dreams come closer, may the people around you treat you with the kindness you deserve, and may you always remember how valued and loved you are. Keep being your wonderful, chaotic, sweet self. Never stop shining, Lakshita. 🌷</p>
+      <p>No matter how busy life gets, I'll always be cheering for you and wishing the best for you. Thank you for being you. You deserve a birthday full of happiness and a year full of beautiful surprises. Happy Birthday once again, behen! 🫶🎂</p>
+      <div class="signature">Your brother, always 💌</div>
+    </div>
+    <div id="afterLetter" class="hidden">
+      <div class="music-row"><span class="music-note">🎵</span><button class="primary" id="musicButton" onclick="toggleMusic()">Play cute background music ♫</button></div>
+      <h1>And one more thing…</h1>
+      <p>Here are a few little memory spots for your favourite photos. 📸</p>
+      <div class="photo-frame" id="photoFrame"><div><div style="font-size:2.5rem">📷💗</div><b>Your favourite photo goes here</b><p style="font-size:.88rem;margin:6px 0">Send me the photo you want to include, and I can embed it into the website for you.</p></div></div>
+      <div class="memories">
+        <div class="memory"><b>🌸</b>Little moments</div>
+        <div class="memory"><b>😂</b>Our silly laughs</div>
+        <div class="memory"><b>🫶</b>Always in your corner</div>
+        <div class="memory"><b>✨</b>More memories ahead</div>
+      </div>
+      <div class="final-note">
+        <div class="script">You deserve all the good things.</div>
+        <p>Make a wish, take a deep breath, smile big, and let this year be full of lovely surprises. 🎉💖</p>
+        <button class="primary" onclick="celebrate()">One last birthday surprise 🎊</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const hearts=document.getElementById('hearts');
+const symbols=['♥','♡','💗','💕','✧','🌸'];
+for(let i=0;i<25;i++){const h=document.createElement('span');h.className='heart';h.textContent=symbols[Math.floor(Math.random()*symbols.length)];h.style.left=Math.random()*100+'%';h.style.fontSize=(14+Math.random()*22)+'px';h.style.animationDuration=(8+Math.random()*11)+'s';h.style.animationDelay=(-Math.random()*18)+'s';hearts.appendChild(h)}
+function showScreen(n){[1,2,3].forEach(x=>document.getElementById('screen'+x).classList.toggle('hidden',x!==n));if(n===3)celebrate(false)}
+function makeNoRun(id){const b=document.getElementById(id);const scoot=()=>{b.style.position='relative';b.style.transform=`translate(${Math.random()*150-75}px,${Math.random()*80-40}px)`};b.addEventListener('pointerenter',scoot);b.addEventListener('touchstart',e=>{e.preventDefault();scoot()},{passive:false});b.addEventListener('click',()=>{showScreen(1);b.style.transform=''})}
+makeNoRun('no1');makeNoRun('no2');
+let opened=false;
+function openLetter(){const env=document.getElementById('envelope');env.classList.add('open');if(opened)return;opened=true;document.getElementById('tapHint').textContent='A little note, just for you 💗';setTimeout(()=>{document.getElementById('letter').classList.remove('hidden');document.getElementById('afterLetter').classList.remove('hidden');celebrate();},650)}
+function celebrate(big=true){const area=document.getElementById('confetti');const count=big?100:35;for(let i=0;i<count;i++){const c=document.createElement('i');c.className='confetti-piece';c.style.left=Math.random()*100+'%';c.style.background=['#ff4f91','#ffb3d1','#f7c85e','#bd8bff','#ff7f6e','#ffffff'][Math.floor(Math.random()*6)];c.style.animationDelay=Math.random()*(big?1.2:.8)+'s';c.style.animationDuration=(2.4+Math.random()*2)+'s';area.appendChild(c);setTimeout(()=>c.remove(),5000)}}
+let audioCtx=null, musicTimer=null, musicOn=false, noteIndex=0;
+const melody=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,659.25,783.99,1046.5,880,783.99,659.25,587.33];
+function playNote(){if(!musicOn||!audioCtx)return;const now=audioCtx.currentTime;const osc=audioCtx.createOscillator();const gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=melody[noteIndex%melody.length];gain.gain.setValueAtTime(0.0001,now);gain.gain.exponentialRampToValueAtTime(.075,now+.04);gain.gain.exponentialRampToValueAtTime(.0001,now+.42);osc.connect(gain);gain.connect(audioCtx.destination);osc.start(now);osc.stop(now+.45);noteIndex++;musicTimer=setTimeout(playNote,430)}
+async function toggleMusic(){const btn=document.getElementById('musicButton');if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')await audioCtx.resume();musicOn=!musicOn;if(musicOn){btn.textContent='Pause cute background music ♫';playNote()}else{clearTimeout(musicTimer);btn.textContent='Play cute background music ♫'}}
+</script>
+</body>
+</html>
